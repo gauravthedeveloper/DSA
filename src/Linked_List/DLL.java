@@ -1,28 +1,23 @@
 package Linked_List;
 
-public class SLL {
+public class DLL {
+
     Node head;
     Node tail;
     int size;
 
-    SLL() {
+    DLL() {
         size = 0;
-
     }
 
-  private static class Node {
+    private static class Node {
         int value;
+        Node previous;
         Node next;
 
         Node(int value) {
             this.value = value;
         }
-
-//        Node(int value, Node next) {
-//            this.value = value;
-//            this.next = next;
-//        }
-
     }
 
     void insertFirst(int value) {
@@ -32,50 +27,49 @@ public class SLL {
             tail = temp;
         } else {
             temp.next = head;
+            head.previous = temp;
             head = temp;
         }
         size++;
 
     }
 
-    void insertEnd(int value) {
+    void insetEnd(int value) {
         if (size == 0) {
             insertFirst(value);
         }
         Node node = new Node(value);
         tail.next = node;
+        node.previous = tail;
         tail = node;
         size++;
+    }
+
+    void displayreverse() {
+        Node temp = tail;
+        while (true) {
+            System.out.print(temp.value + " ->");
+            if (temp.previous == null) {
+
+                break;
+            }
+            temp = temp.previous;
+        }
+        System.out.println("Start");
+
     }
 
     void display() {
         Node temp = head;
         while (true) {
             System.out.print(temp.value + " ->");
-            if (temp.next == null)break;
+            if (temp.next == null) {
+
+                break;
+            }
             temp = temp.next;
         }
         System.out.println("End");
-
-    }
-
-    void reverseList() {
-        Node previous,current,next;
-        current=next=head;
-        previous=null;
-        tail=head;
-        while(next!=null){
-
-            next=next.next;
-            current.next=previous;
-            previous=current;
-            current=next;
-            if(next==null)break;
-
-        }
-
-        head= previous;
-
 
     }
 }

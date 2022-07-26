@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f882b32d-6319-4553-ab74-9993475ee364" name="Changes" comment="initial setup">
-      <change afterPath="$PROJECT_DIR$/src/Linked_List/Main.java" afterDir="false" />
+    <list default="true" id="f882b32d-6319-4553-ab74-9993475ee364" name="Changes" comment="Updated Linked list">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Linked_List/DLL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Linked_List/DLLTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Linked_List/SLLTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Linked_List/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Linked_List/SLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Linked_List/SLL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,12 +37,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Linked_List.Main" />
+    <configuration name="SLLTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Linked_List.SLLTest" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
@@ -52,7 +57,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.SLLTest" />
       </list>
     </recent_temporary>
   </component>
@@ -86,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658824995192</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="initial setup">
+      <created>1658826431326</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658826431326</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,6 +114,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial setup" />
+    <MESSAGE value="Updated Linked list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Linked list" />
   </component>
 </project>

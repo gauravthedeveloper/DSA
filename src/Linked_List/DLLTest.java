@@ -17,6 +17,6 @@ public class DLLTest {
         dl.insetEnd(412);
 
         dl.display();
-        dl.displayreverse();
+        dl.displayReverse();
     }
 }

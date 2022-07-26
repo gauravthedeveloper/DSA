@@ -45,7 +45,7 @@ public class DLL {
         size++;
     }
 
-    void displayreverse() {
+    void displayReverse() {
         Node temp = tail;
         while (true) {
             System.out.print(temp.value + " ->");

@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f882b32d-6319-4553-ab74-9993475ee364" name="Changes" comment="Updated Linked list">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Linked_List/DLL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Linked_List/DLLTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Linked_List/SLLTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Linked_List/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Linked_List/SLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Linked_List/SLL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Linked_List/DLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Linked_List/DLL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Linked_List/DLLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Linked_List/DLLTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658826431326</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updated Linked list">
+      <created>1658834243861</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658834243861</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

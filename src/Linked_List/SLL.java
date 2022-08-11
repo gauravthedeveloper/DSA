@@ -10,7 +10,7 @@ public class SLL {
 
     }
 
-  private static class Node {
+    private static class Node {
         int value;
         Node next;
 
@@ -38,6 +38,18 @@ public class SLL {
 
     }
 
+
+  Node insertatindexREC(int index,int  value,Node next) {
+        if (index==0){
+            Node node = new Node(value);
+            node.next=next;
+            return node;
+        }
+
+        //next.next= insertatindexREC(index--,value,next.next);
+        return next;
+    }
+
     void insertEnd(int value) {
         if (size == 0) {
             insertFirst(value);
@@ -52,7 +64,7 @@ public class SLL {
         Node temp = head;
         while (true) {
             System.out.print(temp.value + " ->");
-            if (temp.next == null)break;
+            if (temp.next == null) break;
             temp = temp.next;
         }
         System.out.println("End");
@@ -60,21 +72,21 @@ public class SLL {
     }
 
     void reverseList() {
-        Node previous,current,next;
-        current=next=head;
-        previous=null;
-        tail=head;
-        while(next!=null){
+        Node previous, current, next;
+        current = next = head;
+        previous = null;
+        tail = head;
+        while (next != null) {
 
-            next=next.next;
-            current.next=previous;
-            previous=current;
-            current=next;
-            if(next==null)break;
+            next = next.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+            if (next == null) break;
 
         }
 
-        head= previous;
+        head = previous;
 
 
     }

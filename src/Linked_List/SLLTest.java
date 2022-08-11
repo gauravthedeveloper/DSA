@@ -23,5 +23,7 @@ public class SLLTest {
         sll.reverseList();
         sll.display();
 
+        sll.insertatindexREC(2,6666,sll.head);
+
     }
 }

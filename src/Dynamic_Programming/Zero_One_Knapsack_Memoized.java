@@ -3,7 +3,8 @@ package Dynamic_Programming;
 import java.util.Scanner;
 
 public class Zero_One_Knapsack_Memoized {
-/*
+
+    /*
     1. You are given a number n, representing the count of items.
             2. You are given n numbers, representing the values of n items.
             3. You are given n numbers, representing the weights of n items.
@@ -55,47 +56,31 @@ public class Zero_One_Knapsack_Memoized {
         }
         int capacity=sc.nextInt();
         initalizedp(n+1,capacity+1);
-       knapsack(values,weights,capacity,n);
+        System.out.println(knapsack(values,weights,capacity,n));
 
     }
     static void initalizedp(int n,int capacity){
         dp= new int[n][capacity];
         for (int i = 0; i < n; i++) {
-
-                dp[i][0]=0;
-
-        }
-        for (int j = 0; j < capacity; j++) {
-            dp[0][j]=0;
-        }
-    }
-
-    static void knapsack(int[] values,int[] weights,int capacity,int size){
-//        if(size==0||capacity==0){
-//            return 0;
-//        }
-//        if(dp[size][capacity]!=-1){
-//            return dp[size][capacity];
-//        }
-
-//        for (int i = 0; i < size + 1; i++) {
-//            for (int j = 0; j < capacity + 1; j++) {
-//                System.out.print(dp[i][j]);
-//            }
-//            System.out.println();
-//        }
-        for (int i = 1; i < size+1; i++) {
-            for (int j = 1; j < capacity+1; j++) {
-                if(weights[i-1]<=j){
-                    dp[i][j]= Math.max(values[i-1]+dp[i-1][j-weights[i-1]],dp[i-1][j]);
-
-                }
-                else  dp[i][j]=dp[i-1][j];
+            for (int j = 0; j < capacity; j++) {
+                dp[i][j]=-1;
             }
-
         }
-        System.out.println(dp[size][capacity]);
-
     }
+
+    static int knapsack(int[] values,int[] weights,int capacity,int size){
+        if(size==0||capacity==0){
+            return 0;
+        }
+        if(dp[size][capacity]!=-1){
+            return dp[size][capacity];
+        }
+        if(weights[size-1]<=capacity){
+            dp[size][capacity]= Math.max(values[size-1]+knapsack(values,weights,capacity-weights[size-1],size-1),knapsack(values,weights,capacity,size-1));
+            return dp[size][capacity];
+        }
+        else return dp[size][capacity]=knapsack(values,weights,capacity,size-1);
+    }
+
 
 }

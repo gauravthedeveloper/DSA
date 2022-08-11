@@ -55,30 +55,47 @@ public class Zero_One_Knapsack_Memoized {
         }
         int capacity=sc.nextInt();
         initalizedp(n+1,capacity+1);
-        System.out.println(knapsack(values,weights,capacity,n));
+       knapsack(values,weights,capacity,n);
 
     }
     static void initalizedp(int n,int capacity){
         dp= new int[n][capacity];
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < capacity; j++) {
-                dp[i][j]=-1;
-            }
+
+                dp[i][0]=0;
+
+        }
+        for (int j = 0; j < capacity; j++) {
+            dp[0][j]=0;
         }
     }
 
-    static int knapsack(int[] values,int[] weights,int capacity,int size){
-        if(size==0||capacity==0){
-            return 0;
+    static void knapsack(int[] values,int[] weights,int capacity,int size){
+//        if(size==0||capacity==0){
+//            return 0;
+//        }
+//        if(dp[size][capacity]!=-1){
+//            return dp[size][capacity];
+//        }
+
+//        for (int i = 0; i < size + 1; i++) {
+//            for (int j = 0; j < capacity + 1; j++) {
+//                System.out.print(dp[i][j]);
+//            }
+//            System.out.println();
+//        }
+        for (int i = 1; i < size+1; i++) {
+            for (int j = 1; j < capacity+1; j++) {
+                if(weights[i-1]<=j){
+                    dp[i][j]= Math.max(values[i-1]+dp[i-1][j-weights[i-1]],dp[i-1][j]);
+
+                }
+                else  dp[i][j]=dp[i-1][j];
+            }
+
         }
-        if(dp[size][capacity]!=-1){
-            return dp[size][capacity];
-        }
-        if(weights[size-1]<=capacity){
-            dp[size][capacity]= Math.max(values[size-1]+knapsack(values,weights,capacity-weights[size-1],size-1),knapsack(values,weights,capacity,size-1));
-            return dp[size][capacity];
-        }
-        else return dp[size][capacity]=knapsack(values,weights,capacity,size-1);
+        System.out.println(dp[size][capacity]);
+
     }
 
 }
